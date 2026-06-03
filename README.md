@@ -1,4 +1,4 @@
-# Parallel LED Controller (v2) 🚀
+# Parallel LED Controller 🚀
 
 ![Embedded C](https://img.shields.io/badge/Language-Embedded_C-blue?style=for-the-badge&logo=c)
 ![Microcontroller](https://img.shields.io/badge/Platform-AVR%20/%20Microchip-orange?style=for-the-badge)
