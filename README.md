@@ -1,5 +1,5 @@
 ```markdown
-# Parallel LED Controller (v2) 🚀
+# Parallel LED Controller 🚀
 
 ![Embedded C](https://img.shields.io/badge/Language-Embedded_C-blue?style=for-the-badge&logo=c)
 ![Microcontroller](https://img.shields.io/badge/Platform-AVR%20/%20Microchip-orange?style=for-the-badge)
@@ -55,13 +55,10 @@ The project layout is structured according to professional embedded development 
 ### Architectural Comparison
 
 #### 1. Fixed-Tick Loop (`parallel-led-v1.c`)
-* Loops continuously with a strict baseline sleep interval of exactly `10ms`.
-* Increments tracking accumulators (`timeA` to `timeD`) and triggers an update whenever they hit or exceed their respective defined boundaries (`THRESHOLD_A` to `THRESHOLD_D`).
+Loops continuously with a strict baseline sleep interval of exactly `10ms`. It increments tracking accumulators (`timeA` to `timeD`) and triggers an update whenever they hit or exceed their respective defined boundaries (`THRESHOLD_A` to `THRESHOLD_D`).
 
 #### 2. Event-Driven Dynamic Scheduling (`parallel-led-v2.c`)
-* Continuously evaluates the relative mathematical order between remaining threshold counts.
-* Triggers the minimum required time slice natively via `sleep_timer1_ms(x)`, where `OCR1A = 999 * x`.
-* Symmetrically decrements all active accumulators relative to the elapsed period, maximizing deep sleep efficacy.
+Continuously evaluates the relative mathematical order between remaining threshold counts. It triggers the minimum required time slice natively via `sleep_timer1_ms(x)`, where `OCR1A = 999 * x`. Symmetrically decrements all active accumulators relative to the elapsed period, maximizing deep sleep efficacy.
 
 ---
 
@@ -72,14 +69,11 @@ The project layout is structured according to professional embedded development 
 * **Compiler:** CodeVisionAVR / `avr-gcc` configured for an 8MHz clock rate.
 
 ### Deployment Instruction
-To flash the compiled Intel Hex binary directly to your target microcontroller via `avrdude`, execute the following terminal command:
+To flash the compiled Intel Hex binary directly to your target microcontroller, execute the following command in your terminal:
 
 ```bash
 avrdude -c <your_programmer> -p m32 -U flash:w:Debug/Exe/parallel-led-v2.hex:i
 
-```
-
----
 
 ## 👥 Author
 
@@ -87,4 +81,3 @@ avrdude -c <your_programmer> -p m32 -U flash:w:Debug/Exe/parallel-led-v2.hex:i
 
 ```
 
-```
