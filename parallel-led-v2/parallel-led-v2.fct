@@ -1,0 +1,3 @@
+main DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"parallel-led-v2.c" LINE:60
+sleep_timer1_ms DSTACK_USAGE:2 DSTACK_LEVEL:2 FILE:"parallel-led-v2.c" LINE:23
+timer1_compa_isr DSTACK_USAGE:1 DSTACK_LEVEL:3 FILE:"parallel-led-v2.c" LINE:17

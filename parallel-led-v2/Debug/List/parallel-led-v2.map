@@ -1,0 +1,27 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+timeA                                                                             0x0260       4
+timeB                                                                             0x0264       4
+timeC                                                                             0x0268       4
+timeD                                                                             0x026C       4
+timer1_flag                                                                       0x0270       1
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+a                                                                                 R5           1
+b                                                                                 R4           1
+c                                                                                 R7           1
+d                                                                                 R6           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+timer1_compa_isr                                                                  0x0005D      6
+sleep_timer1_ms                                                                   0x00063     45
+main                                                                              0x00090    193
